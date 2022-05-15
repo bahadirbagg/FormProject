@@ -38,7 +38,7 @@ function FormPopup() {
   });
 
   const [field, setField] = useState({
-    name: "",
+    name: name,
     dataType: dataType,
     required: checkbox,
   });
@@ -51,10 +51,14 @@ function FormPopup() {
     if (input.value === "clicked") {
       setCheckbox(() => !checkbox);
       setField({ ...field, [input.name]: !checkbox });
-    } else {
+    }
+    if (input.name === "name") {
+      setField({ ...field, [input.name]: input.value });
+      setName(input.value);
+    }
+    if (input.name === "dataType") {
       setField({ ...field, [input.name]: input.value });
     }
-    setName(input.value);
   };
 
   const handleFormSubmit = (e) => {
@@ -92,9 +96,10 @@ function FormPopup() {
     }
     if (field.name !== "") {
       setAlert(4);
+      setTimeout(() => setAlert(!alert), 1500);
     }
-
     form.fields.push(field);
+    setName("");
   };
 
   useEffect(() => {
@@ -162,7 +167,7 @@ function FormPopup() {
                 type="text"
                 placeholder="Alan adını girin"
                 onChange={handleFieldChange}
-                value={field.name}
+                value={name}
                 name="name"
               />
             </Form.Group>
@@ -198,7 +203,11 @@ function FormPopup() {
                 value="clicked"
               />
             </Form.Group>
-            {alert === 4 ? <Alert variant="success">Alan Eklendi</Alert> : null}
+            {alert === 4 ? (
+              <Alert show={show} variant="success">
+                Alan Eklendi
+              </Alert>
+            ) : null}
             <Button variant="primary" onClick={handleFieldSubmit}>
               Alan Ekle
             </Button>

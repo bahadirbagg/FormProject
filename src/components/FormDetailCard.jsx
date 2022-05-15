@@ -7,6 +7,11 @@ function FormDetailCard({ data }) {
       {data?.map((data, i) => (
         <FormDetailCardView data={data} key={i} />
       ))}
+      {data.length === 0 && (
+        <h1 className="container flex justify-center items-center p-5 ">
+          Form Girilmemiş
+        </h1>
+      )}
     </div>
   );
 }
