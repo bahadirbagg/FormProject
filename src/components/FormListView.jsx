@@ -27,12 +27,12 @@ function FormListView({ data, deleteForm }) {
         text="Dark"
         style={{ width: "auto", height: "auto" }}
       >
-        <Card.Header onClick={setLink}>
-          {truncateView(data.formname, 15)}
+        <Card.Header className="h-10 flex items-center" onClick={setLink}>
+          {truncateView(data.formname, 23)}
         </Card.Header>
         <Card.Body onClick={setLink}>
-          <Card.Text className="h-10 flex items-center">
-            {truncateView(data.description, 25)}
+          <Card.Text className="h-16 flex items-center">
+            {truncateView(data.description, 55)}
           </Card.Text>
         </Card.Body>
         <Card.Footer>

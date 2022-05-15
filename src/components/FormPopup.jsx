@@ -194,7 +194,7 @@ function FormPopup() {
                 type="checkbox"
                 name="required"
                 onChange={handleFieldChange}
-                label="required"
+                label="Zorunlu Alan"
                 value="clicked"
               />
             </Form.Group>
