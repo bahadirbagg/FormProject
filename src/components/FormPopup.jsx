@@ -215,10 +215,10 @@ function FormPopup() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Kapat
+            Close
           </Button>
           <Button variant="primary" onClick={handleFormSubmit}>
-            Kaydet
+            Save
           </Button>
         </Modal.Footer>
       </Modal>
