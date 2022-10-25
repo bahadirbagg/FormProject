@@ -14,13 +14,13 @@ function FormDetailCardView({ data }) {
           }}
           autoComplete="off"
           type={data.dataType}
-          placeholder={`Lütfen ${data.name} girin`}
+          placeholder={`Please enter ${data.name}.`}
           value={input}
           required={data.required}
         />
       </Form.Group>
       {input === "" && data.required === true ? (
-        <Alert variant="danger">Lütfen {data.name} girin.</Alert>
+        <Alert variant="danger">Please enter {data.name}.</Alert>
       ) : null}
     </Form>
   );
