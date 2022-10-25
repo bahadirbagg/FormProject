@@ -110,7 +110,7 @@ function FormPopup() {
     <>
       <div className=" flex w-full justify-center items-center">
         <Button variant="primary" onClick={handleShow}>
-          Add New Form
+          Create New Form
         </Button>
       </div>
 
