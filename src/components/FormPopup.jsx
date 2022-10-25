@@ -132,26 +132,26 @@ function FormPopup() {
                 autoComplete="off"
                 type="text"
                 name="formname"
-                placeholder="Form adını girin"
+                placeholder="Enter form name"
                 onChange={handleFormChange}
                 value={form.formname}
                 autoFocus
               />
             </Form.Group>
             {alert === 1 ? (
-              <Alert variant="danger">Lütfen form adını girin.</Alert>
+              <Alert variant="danger">Please enter form name.</Alert>
             ) : null}
             {alert === 5 ? (
-              <Alert variant="danger">Form adı mevcut</Alert>
+              <Alert variant="danger">Form name already exist</Alert>
             ) : null}
             <Form.Group className="mb-3">
-              <Form.Label>Form Açıklaması</Form.Label>
+              <Form.Label>Form Description</Form.Label>
               <Form.Control
                 autoComplete="off"
                 type="text"
                 name="description"
                 onChange={handleFormChange}
-                placeholder="Form açıklamasını girin"
+                placeholder="Enter form description"
                 value={form.description}
                 autoFocus
               />
@@ -162,10 +162,10 @@ function FormPopup() {
           </Form>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Alan Adı</Form.Label>
+              <Form.Label>Field Name</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Alan adını girin"
+                placeholder="Enter field name"
                 onChange={handleFieldChange}
                 value={name}
                 name="name"
@@ -176,7 +176,7 @@ function FormPopup() {
             ) : null}
 
             <Form.Group className="mb-3">
-              <Form.Label>Alan Tipi</Form.Label>
+              <Form.Label>Field Type</Form.Label>
               <Form.Select
                 name="dataType"
                 onChange={
@@ -199,17 +199,17 @@ function FormPopup() {
                 type="checkbox"
                 name="required"
                 onChange={handleFieldChange}
-                label="Zorunlu Alan"
+                label="Required Field"
                 value="clicked"
               />
             </Form.Group>
             {alert === 4 ? (
               <Alert show={show} variant="success">
-                Alan Eklendi
+                Field Added
               </Alert>
             ) : null}
             <Button variant="primary" onClick={handleFieldSubmit}>
-              Alan Ekle
+              Add Field
             </Button>
           </Form>
         </Modal.Body>
