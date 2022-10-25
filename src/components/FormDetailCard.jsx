@@ -9,7 +9,7 @@ function FormDetailCard({ data }) {
       ))}
       {data.length === 0 && (
         <h1 className="container flex justify-center items-center p-5 ">
-          Form Girilmemiş
+          Form Not Created
         </h1>
       )}
     </div>
