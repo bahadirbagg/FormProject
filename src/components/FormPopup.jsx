@@ -110,7 +110,7 @@ function FormPopup() {
     <>
       <div className=" flex w-full justify-center items-center">
         <Button variant="primary" onClick={handleShow}>
-          Yeni Form Oluştur
+          Add New Form
         </Button>
       </div>
 
@@ -127,7 +127,7 @@ function FormPopup() {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Form Adı</Form.Label>
+              <Form.Label>Form Name</Form.Label>
               <Form.Control
                 autoComplete="off"
                 type="text"
@@ -157,7 +157,7 @@ function FormPopup() {
               />
             </Form.Group>
             {alert === 2 ? (
-              <Alert variant="danger">Lütfen form açıklamasını girin.</Alert>
+              <Alert variant="danger">Please enter form description.</Alert>
             ) : null}
           </Form>
           <Form>
@@ -172,7 +172,7 @@ function FormPopup() {
               />
             </Form.Group>
             {alert === 3 && name === "" ? (
-              <Alert variant="danger">Lütfen input adını girin.</Alert>
+              <Alert variant="danger">Please enter field name.</Alert>
             ) : null}
 
             <Form.Group className="mb-3">
